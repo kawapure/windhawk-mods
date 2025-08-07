@@ -156,7 +156,7 @@ BOOL Wh_ModInit()
             (void **)&IsAppThemed_orig);
 		
 		Wh_SetFunctionHook(
-            (void*)GetProcAddress(LoadLibrary(L"shell32.dll"), "RegQueryValueExW"), 
+            (void*)GetProcAddress(LoadLibrary(L"shell32.dll"), "pfnGetDragImageMsg"), 
             (void*)GetDragImageMsg, 
             (void**)&pfnGetDragImageMsg);
 
